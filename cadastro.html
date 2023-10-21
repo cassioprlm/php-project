@@ -10,26 +10,30 @@
 
   <body class="d-flex align-items-center py-4 bg-body-tertiary h-100">
     <main class="w-100 m-auto form-container">
-      <form action="" method="POST">
+      <form id="formulario" action="php/database/cadastro.php" method="POST" novalidate>
         <img src="assets/grumpy.svg" class="mb-4" height="200" width="260">
         <div class="form-floating">
-          <input type="email" class="form-control" id="floatInput" placeholder="Type your Email"/>
+          <input type="text" class="form-control" id="floatInput" name="nome_usuario" placeholder="Type your Name"/>
+          <label for="floatInput">Nome</label>
+        </div>
+        <div class="form-floating">
+          <input type="email" class="form-control" id="floatInput" name="email" placeholder="Type your Email"/>
           <label for="floatInput">Email</label>
         </div>
         <div class="form-floating">
-          <input type="password" class="form-control" id="floatInput" placeholder="Password"/>
+          <input type="password" class="form-control" id="floatInput" name="senha" placeholder="Password"/>
           <label for="floatInput">Senha</label>
         </div>
         <div class="form-floating">
-          <input type="password" class="form-control" id="floatInput" placeholder="Password"/>
+          <input type="password" class="form-control" id="floatInput" name="confirmar_senha" placeholder="Password"/>
           <label for="floatInput">Confirmar senha</label>
         </div>
-        <button class="btn btn-success w-100 py-2">Cadastrar</button>
-
+        <button class="btn btn-success w-100 py-2" type="submit">Cadastrar</button>
       </form>
+
     </main>
-
+    <script src="js/validacao.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </body>
 </html>
