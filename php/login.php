@@ -15,20 +15,18 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $stmt = $mysql -> prepare($validar);
             if($stmt){
                 $stmt -> bind_param("ss", $email, $password);
-                //executar a consulta
                 $stmt -> execute();
-                // Armazenar o resultado
                 $stmt->store_result();
 
                 if($stmt->num_rows > 0){
-
+                    // Autenticação bem sucedida, encoda em json a saida "success" = true
                     header("Content-Type: application/json");
                     echo json_encode(array("success"=>true));
                     $_SESSION['logged'] = true;
                     $_SESSION['email'] = $email;  
                 
                 }else{
-                    // Autenticação falhou, encoda em json a saida "success" para ser validado utilizando xhr
+                    // Autenticação falhou, encoda em json a saida "success" = false
                     header("Content-Type: application/json");
                     echo json_encode(array("success"=>false));
 
