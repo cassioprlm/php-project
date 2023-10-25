@@ -9,16 +9,21 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         if(isset($_POST['email']) && isset($_POST['password'])){
             $email = $_POST['email'];
             $password = $_POST['password'];
-        
+            
+            //JUST FOR FUN
+           // $sql = "SELECT * FROM usuarios WHERE email = '$email' AND senha = '$password'";
+           // $resultado = $mysql->query($sql);
+           // -------------------------------------------------------------------------------
 
-            $validar = "SELECT * FROM usuarios WHERE email = ? AND senha = ?";
-            $stmt = $mysql -> prepare($validar);
+            $sql = "SELECT * FROM usuarios WHERE email = ? AND senha = ?";
+            $stmt = $mysql -> prepare($sql);
             if($stmt){
                 $stmt -> bind_param("ss", $email, $password);
                 $stmt -> execute();
                 $stmt->store_result();
 
                 if($stmt->num_rows > 0){
+                //if($resultado->num_rows > 0){
                     // Autenticação bem sucedida, encoda em json a saida "success" = true
                     header("Content-Type: application/json");
                     echo json_encode(array("success"=>true));
@@ -31,6 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                     echo json_encode(array("success"=>false));
 
                 }
+                mysqli_close($mysql);
 
             }else{
                 echo "Statement deu errado";
@@ -38,9 +44,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         }else{
             echo "Erro no POST";
-        }
+         }
     }else{ 
         echo "Method Not Allowed";
     }
-   
 ?>
