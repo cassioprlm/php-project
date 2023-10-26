@@ -1,9 +1,8 @@
 <?php 
 
 require_once 'database/conexao.php';
-require_once '../controller/JWTController.php';
 session_set_cookie_params(['httpOnly' => true]);
-session_start();
+
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
         if(isset($_POST['email']) && isset($_POST['password'])){
@@ -27,6 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                     // Autenticação bem sucedida, encoda em json a saida "success" = true
                     header("Content-Type: application/json");
                     echo json_encode(array("success"=>true));
+                    session_start();
                     $_SESSION['logged'] = true;
                     $_SESSION['email'] = $email;  
                 
