@@ -10,9 +10,9 @@
    // );
     
 
-    $usuario = 'root';
-    $senha = 'cassinho15';
-    $database = 'phpweb';
+    $usuario = '<username>';
+    $senha = '<password>';
+    $database = '<database>';
     $host = 'localhost';
 
     $mysql = new mysqli($host, $usuario, $senha, $database);
