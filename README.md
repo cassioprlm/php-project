@@ -1,7 +1,7 @@
 # php-project
 
 
-**É necessário criar a tabela usuarios e a tabela pacientes:**
+**É necessário criar a tabela usuarios e a tabela pacientes no mariadb:**
 
 - Criação da Database(phpweb) e a tabela Usuarios
     ```
