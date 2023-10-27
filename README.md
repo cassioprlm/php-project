@@ -23,6 +23,6 @@
     peso DECIMAL(7, 2),
     altura DECIMAL(5, 2),
     email VARCHAR(255) NOT NULL,
-    imc DECIMAL(7,2);
+    imc DECIMAL(7,2)
   );
   ```
