@@ -1,7 +1,11 @@
 # php-project
 
-- É necessário criar a tabela usuarios e a tabela pacientes:
 
+*É necessário criar a tabela usuarios e a tabela pacientes:
+
+- Usuarios
+
+- Pacientes
   ```
   CREATE TABLE pacientes (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -11,8 +15,5 @@
     altura DECIMAL(5, 2),
     email VARCHAR(255) NOT NULL,
     imc DECIMAL(7,2);
-);
-
-
-
+  );
   ```
