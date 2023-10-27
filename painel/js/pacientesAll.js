@@ -19,14 +19,14 @@ fetch('/painel/database/listar.php', {
         // Cabeçalho da tabela 
         const cabecalho = tabela.createTHead();
         const cabecalhoRow = cabecalho.insertRow();
-        cabecalhoRow.innerHTML = '<th class="py-2 px-4 bg-gray-300">Email</th><th class="py-2 px-4 bg-gray-300">Nome</th><th class="py-2 px-4 bg-gray-300">Idade</th><th class="py-2 px-4 bg-gray-300">Peso</th><th class="py-2 px-4 bg-gray-300">IMC</th>';
+        cabecalhoRow.innerHTML = '<th class="py-2 px-4 bg-gray-300">Email</th><th class="py-2 px-4 bg-gray-300">Nome</th><th class="py-2 px-4 bg-gray-300">Idade</th><th class="py-2 px-4 bg-gray-300">Altura</th><th class="py-2 px-4 bg-gray-300">Peso</th><th class="py-2 px-4 bg-gray-300">IMC</th>';
 
         // Corpo da tabela
         const corpo = tabela.createTBody();
         // Itere sobre os dados e crie as linhas da tabela
         data.forEach((paciente) => {
             const linha = corpo.insertRow();
-            linha.innerHTML = `<td class="py-2 px-4 border-t">${paciente.email}</td><td class="py-2 px-4 border-t">${paciente.nome}</td><td class="py-2 px-4 border-t">${paciente.idade}</td><td class="py-2 px-4 border-t">${paciente.peso}</td><td class="py-2 px-4 border-t">${paciente.imc}</td>`;
+            linha.innerHTML = `<td class="py-2 px-4 border-t">${paciente.email}</td><td class="py-2 px-4 border-t">${paciente.nome}</td><td class="py-2 px-4 border-t">${paciente.idade}</td><td class="py-2 px-4 border-t">${paciente.altura}</td><td class="py-2 px-4 border-t">${paciente.peso}</td><td class="py-2 px-4 border-t">${paciente.imc}</td>`;
             const line = corpo.insertRow();
         });
             // Adicione a tabela ao container

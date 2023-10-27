@@ -32,10 +32,10 @@
                     header("Content-Type: application/json");
                     echo json_encode(array("success"=>true));
             
-                    $sql = "INSERT INTO pacientes (nome, email, idade, peso, imc) VALUES (?, ?, ?, ?, ?)";
+                    $sql = "INSERT INTO pacientes (nome, email, idade, peso, altura, imc) VALUES (?, ?, ?, ?, ?, ?)";
                     $stmt = $mysql -> prepare($sql);
                     if($stmt){
-                        $stmt -> bind_param("ssidd", $nome, $email,$idade, $peso, $imc);
+                        $stmt -> bind_param("ssiddd", $nome, $email,$idade, $peso, $altura, $imc);
                         $stmt -> execute();
                         $stmt->store_result();
                     }else{

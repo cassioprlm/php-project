@@ -18,8 +18,8 @@
     <div>
         <h1 class="title is-1 has-text-centered">Todos os Pacientes Cadastrados</h1>
     </div>
-    <div class="container d-flex justify-content-center align-items-center" style="height: 40vh;">
-        <div class="container" style="margin-top: 0vh;"><div id="tabela-container"></div></div>
+    <div class="container d-flex justify-content-center align-items-center" style="height: 40%;">
+        <div class="container"><div id="tabela-container"></div></div>
     </div>
     
     <div class="container has-text-centered" style="margin-top: 5vh;">
