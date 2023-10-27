@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                     echo json_encode(array("success"=>true));
                     session_start();
                     $_SESSION['logged'] = true;
-                    $_SESSION['email'] = $email;  
+                    $_SESSION['email'] = $email;
                 
                 }else{
                     // Autenticação falhou, encoda em json a saida "success" = false
