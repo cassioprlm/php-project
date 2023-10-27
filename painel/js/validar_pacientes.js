@@ -10,7 +10,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     document.getElementById("cadastrar-button").addEventListener("click", function () {
         console.log(nome.value, idade.value, peso.value, altura.value);
-        
 
         if (!validateName(nome.value)) {
             Swal.fire({

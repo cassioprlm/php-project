@@ -28,7 +28,7 @@
         <a href="/painel/php/cadastro_pacientes.php" class="navbar-item rounded is-hoverable">
             Cadastrar
         </a>
-        <a class="navbar-item rounded is-hoverable">
+        <a href="/painel/php/listar_pacientes.php" class="navbar-item rounded is-hoverable">
             Listar Pacientes
         </a>
             
